@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+
+    <!-- MDBootstrap -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <title>Assignment</title>
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#"><img src="logo.png" alt="Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><i class="fas fa-layer-group"></i>Dashboard<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><i class="fas fa-users"></i>Enquiries<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><i class="fas fa-circle-notch"></i>Follow Ups<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><i class="fas fa-at"></i>Emails<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="#"><i class="fas fa-sliders-h"></i>Settings<span class="sr-only"></span></a>
+                </li>
+    </nav>
+
+
+    <!-- Enquiries page -->
+
+    <!-- Header -->
+    <div class="container-fluid  header">
+        <div class="row">
+            <h3 class="col-lg-6">ALL Enquiries</h3>
+            <div class=" col-lg-6 ">
+                <button class="btn btn-outline-dark" type="button" data-toggle="collapse" data-target="#search-btn" aria-expanded="false" aria-controls="search-btn"><i class="fas fa-search"></i>Search</button>
+                <button type="button" class="btn btn-outline-info"><i class="fas fa-filter"></i>FILTER</button>
+                <button type="button" class="btn btn-outline-info"><i class="fas fa-cloud-download-alt"></i>IMPORT</button>
+            </div>
+        </div>
+        <div class="collapse search" id="search-btn">
+            <form>
+                <div class="row justify-content-center ">
+                    <div class="form-group col-lg-3">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                    <div class="form-group col-lg-3">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                    </div>
+                    <div class="form-group col-lg-3">
+                        <label for="number" class="sr-only">Phone No.</label>
+                        <input type="tel" class="form-control" id="number" placeholder="Phone No.">
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center">
+                    <div class="dropdown col-lg-2">
+                        <button class="btn btn-outline-dark dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Select Status</button>
+                        <div class="dropdown-menu" aria-labelledby="dropdown">
+                            <a class="dropdown-item" href="#">Maharashtra</a>
+                            <a class="dropdown-item" href="#">Kerala</a>
+                            <a class="dropdown-item" href="#">Andhra Pradesh</a>
+                            <a class="dropdown-item" href="#">Gujarat</a>
+                            <a class="dropdown-item" href="#">Rajasthan</a>
+                            <a class="dropdown-item" href="#">Telangana</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" placeholder="Start Date">
+                    </div>
+                    <div class="col-lg-2">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control" placeholder="Till Date">
+                    </div>
+                </div>
+                <div class="form-group d-flex justify-content-center btn-search">
+                    <button type="button" class="btn btn-outline-dark">Search</button>
+                </div>
+            </form>
+        </div>
+        <hr>
+    </div>
+
+    <!-- Details Card -->
+    <div class="all">
+        <div class="details">
+            <div class="wrapper" id="slider">
+                <a id="content">
+                    <div class="card " id="sidebarCollapse">
+                        <div class="card-header">
+                            <span class="badge badge-pill badge-dark">20</span>&nbsp;&nbsp;&nbsp;
+                            <label for="name">Rajesh Chityal</label>
+                            <span style="float: right;" class="badge badge-pill badge-dark">21-07-2020</span>
+                        </div>
+                        <div class="card-body row ">
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Email:-</label>
+                                <label for="name">raj@gmail.com</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Phone No:-</label>
+                                <label for="name">6852186136</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Location:-</label>
+                                <label for="name">Mumbai</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Qualification:-</label>
+                                <label for="name">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+
+            <!-- Details -->
+            <div class="wrapper">
+                <a id="content">
+                    <div class="card " id="sidebarCollapse">
+                        <div class="card-header">
+                            <span class="badge badge-pill badge-dark">20</span>&nbsp;&nbsp;&nbsp;
+                            <label for="name">Rajesh Chityal</label>
+                            <span style="float: right;" class="badge badge-pill badge-dark">21-07-2020</span>
+                        </div>
+                        <div class="card-body row ">
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Email:-</label>
+                                <label for="name">raj@gmail.com</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Phone No:-</label>
+                                <label for="name">6852186136</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Location:-</label>
+                                <label for="name">Mumbai</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Qualification:-</label>
+                                <label for="name">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <!-- Details -->
+            <div class="wrapper">
+                <a id="content">
+                    <div class="card " id="sidebarCollapse">
+                        <div class="card-header">
+                            <span class="badge badge-pill badge-dark">20</span>&nbsp;&nbsp;&nbsp;
+                            <label for="name">Rajesh Chityal</label>
+                            <span style="float: right;" class="badge badge-pill badge-dark">21-07-2020</span>
+                        </div>
+                        <div class="card-body row ">
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Email:-</label>
+                                <label for="name">raj@gmail.com</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Phone No:-</label>
+                                <label for="name">6852186136</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Location:-</label>
+                                <label for="name">Mumbai</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Qualification:-</label>
+                                <label for="name">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
+            <!-- Details -->
+            <div class="wrapper">
+                <a id="content">
+                    <div class="card " id="sidebarCollapse">
+                        <div class="card-header">
+                            <span class="badge badge-pill badge-dark">20</span>&nbsp;&nbsp;&nbsp;
+                            <label for="name">Rajesh Chityal</label>
+                            <span style="float: right;" class="badge badge-pill badge-dark">21-07-2020</span>
+                        </div>
+                        <div class="card-body row ">
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Email:-</label>
+                                <label for="name">raj@gmail.com</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Phone No:-</label>
+                                <label for="name">6852186136</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Location:-</label>
+                                <label for="name">Mumbai</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Qualification:-</label>
+                                <label for="name">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Details -->
+            <div class="wrapper">
+                <a id="content">
+                    <div class="card " id="sidebarCollapse">
+                        <div class="card-header">
+                            <span class="badge badge-pill badge-dark">20</span>&nbsp;&nbsp;&nbsp;
+                            <label for="name">Rajesh Chityal</label>
+                            <span style="float: right;" class="badge badge-pill badge-dark">21-07-2020</span>
+                        </div>
+                        <div class="card-body row ">
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Email:-</label>
+                                <label for="name">raj@gmail.com</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Phone No:-</label>
+                                <label for="name">6852186136</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Location:-</label>
+                                <label for="name">Mumbai</label>
+                            </div>
+                            <div class="details-info col-lg-3 col-md-12">
+                                <label for="name">Qualification:-</label>
+                                <label for="name">Engineer</label>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Details menu -->
+    <div id="con-side" class="all">
+        <div class="info-scroll">
+            <div class="container-fluid inner-header">
+                <h4 class="float-left">Rajesh Chityal</h4>
+                <a id="x">
+                    <h5 class="float-right name-x">x</h5>
+                </a>
+                <button class="btn btn-sm btn-outline-dark dropdown-toggle mr-4 float-right">SELECT</button>
+                <h5 class="float-right">Assigned to</h5>
+            </div>
+
+
+            <!-- Menu  -->
+            <div class="header-menu d-flex flex-row">
+                <a href="">
+                    <h5 class="p-2 active ">Overview</h5>
+                </a>
+                <a href="">
+                    <h5 class="p-2">Conversation</h5>
+                </a>
+                <a href="">
+                    <h5 class="p-2">SMS</h5>
+                </a>
+                <a href="">
+                    <h5 class="p-2">Email</h5>
+                </a>
+            </div>
+            <hr>
+
+            <!-- Info Table -->
+
+            <div class="info-table">
+                <h5>Enquiry Details</h5>
+
+                <table class="table table-striped table-bordered ">
+                    <tbody>
+                        <tr>
+
+                            <td>Name</td>
+                            <td class="edit">Rajesh Chityal<i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td class="edit">raj@gmail.com <i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Company</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td class="edit">6852186136 <i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Location</td>
+                            <td class="edit">Mumbai <i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Interested In</td>
+                            <td class="edit"> <i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Department</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Sub Department</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Experience</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>URL</td>
+                            <td class="edit"><i class="fas fa-user-edit"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Current Status</td>
+                            <td>
+                                <button class="btn btn-outline-dark dropdown-toggle mr-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Basic dropdown</button>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Interested</a>
+                                    <a class="dropdown-item" href="#">Not Interested</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Note</td>
+                            <td class="update-btn">
+                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <button class="btn btn-outline-dark">Update</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="final-btn" class="btn btn-outline-dark ">Update</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#slider").click(function() {
+                $(".all").animate({
+                    width: '50%',
+                }, 1000, function() {
+                    $("#con-side").show().animate({
+
+                        width: '50%',
+                    }, 1000);
+                });
+
+            });
+            $("#x").click(function() {
+                $(".all").animate({
+                    width: '100%',
+                }, 1000, function() {
+                    $("#con-side").hide().animate({
+
+                    }, 1000);
+                });
+
+            });
+            $("#final-btn").click(function() {
+                $("#con-side").hide().animate({
+
+                }, 1000, function() {
+                    $(".all").hide().animate({
+                        width: '100%'
+                    }, );
+                });
+
+            });
+            /* window.addEventListener('click', function(e) {
+
+                if (document.getElementById('#details').contains(e.target).animate({
+                        overflow: 'hidden scroll',
+                    }, 0, function() {
+                        $("#con-side").animate({
+                            overflow: 'hidden',
+                        })
+                    }));
+            }); */
+
+
+        });
+    </script>
+
+</body>
+
+</html>
